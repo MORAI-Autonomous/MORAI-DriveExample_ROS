@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="morai_standard" type="main.py" name="morai_standard" output="screen" />
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find morai_standard)/rviz/morai_standard.rviz" />
+</launch>
