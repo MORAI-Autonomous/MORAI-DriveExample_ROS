@@ -1,6 +1,6 @@
 <launch>
 	<!-- args = "(경로가 생성되는 폴더 이름) (생성할 경로의 파일 이름)" -->
-	<node pkg="morai_standard" type="path_maker.py" name="maker" args="path path_name" output="screen" />
+	<node pkg="morai_standard" type="path_maker.py" name="maker" args="path path" output="screen" />
 	<node pkg="rviz" type="rviz" name="visulization" args='-d $(find morai_standard)/rviz/path_maker.rviz'/>
 
 
