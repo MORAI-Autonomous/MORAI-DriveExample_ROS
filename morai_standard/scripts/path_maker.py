@@ -3,6 +3,7 @@
 
 import os
 import sys
+import csv
 import rospy
 import rospkg
 from morai_msgs.msg  import EgoVehicleStatus
@@ -33,8 +34,10 @@ class test :
 
         rospack=rospkg.RosPack()
         pkg_path=rospack.get_path('morai_standard')
-        full_path=pkg_path +'/'+ self.path_folder_name+'/'+self.make_path_name+'.txt'
-        self.f=open(full_path, 'w')
+        full_path=pkg_path +'/'+ self.path_folder_name+'/'+self.make_path_name+'.csv'
+        self.f = open(full_path, 'w')
+        self.wr = csv.writer(self.f)
+        self.wr.writerow(['x','y','z'])
 
         rate=rospy.Rate(30)
         while not rospy.is_shutdown():
@@ -56,12 +59,11 @@ class test :
         tmp_pose.pose.position.z = z 
         self.global_path.poses.append(tmp_pose)
         distance=sqrt(pow(x-self.prev_x,2)+pow(y-self.prev_y,2))
-        if distance > 0.3:
-            data='{0}\t{1}\t{2}\n'.format(x,y,z)
-            self.f.write(data)
+        if distance > 0.5:
+            self.wr.writerow([x,y,z])
             self.prev_x=x
             self.prev_y=y
-            print(x,y)
+            print(x,y,z)
 
     def status_callback(self,msg): ## Vehicl Status Subscriber 
         self.is_status=True
