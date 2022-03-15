@@ -1,4 +1,4 @@
-[submodule "morai_standard/scripts/autonomous_driving"]
+[submodule "autonomous_driving"]
 	path = morai_standard/scripts/autonomous_driving
 	url = https://github.com/morai-developergroup/morai-standard-ad-algorithm
 	branch = robotics
