@@ -1,6 +1,6 @@
 [submodule "morai_standard/scripts/autonomous_driving"]
 	path = morai_standard/scripts/autonomous_driving
-	url = https://github.com/morai-developergroup/morai-standard-ad-algorithm
+	url = https://github.com/MORAI-Autonomous/MORAI-ADModule
 [submodule "morai_msgs"]
 	path = morai_msgs
-	url = https://github.com/morai-developergroup/morai_msgs
+	url = https://github.com/MORAI-Autonomous/MORAI-ROS_morai_msgs
