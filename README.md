@@ -36,7 +36,7 @@ Install packages which basically need
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/src && catkin_init_workspace
 $ git clone https://github.com/MORAI-Autonomous/MORAI-DriveExample_ROS.git
-$ cd MORAI-DriveExample
+$ cd MORAI-DriveExample_ROS
 $ git submodule update --init --reculsive
 $ find -name 'requirements.txt' | xargs -L 1 sudo pip install -U -r
 $ cd ~/catkin_ws
