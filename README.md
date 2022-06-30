@@ -26,7 +26,7 @@ These example contains the below list.
 
 - ROS1 desktop-full >= melodic
 
-- python >= 3.7
+- python >= 2.7
 
 # Installation
 
@@ -37,7 +37,8 @@ $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/src && catkin_init_workspace
 $ git clone https://github.com/MORAI-Autonomous/MORAI-DriveExample_ROS.git
 $ cd MORAI-DriveExample_ROS
-$ git submodule update --init --reculsive
+$ git submodule update --init --recursive
+$ sudo chmod -R a+x morai_standard/
 $ find -name 'requirements.txt' | xargs -L 1 sudo pip install -U -r
 $ cd ~/catkin_ws
 $ rosdep install --from-paths . --ignore-src -r -y
