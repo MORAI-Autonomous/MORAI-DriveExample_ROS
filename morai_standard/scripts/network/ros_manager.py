@@ -48,7 +48,7 @@ class RosManager:
         # publisher
         self.global_path_pub = rospy.Publisher('/global_path', Path, queue_size=1)
         self.local_path_pub = rospy.Publisher('/local_path', Path, queue_size=1)
-        self.ctrl_pub = rospy.Publisher('/ctrl_cmd', CtrlCmd, queue_size=1)
+        self.ctrl_pub = rospy.Publisher('/ctrl_cmd_0', CtrlCmd, queue_size=1)
         self.traffic_light_pub = rospy.Publisher("/SetTrafficLight", SetTrafficLight, queue_size=1)
         self.odom_pub = rospy.Publisher('/odom', Odometry, queue_size=1)
 
